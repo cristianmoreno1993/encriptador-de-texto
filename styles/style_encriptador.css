@@ -1,0 +1,359 @@
+/*** globales ***/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --fuentePrincipal: "Noto Sans", sans-serif;
+  --font: #e5e5e5;
+  --darkBlue: #0a3871;
+  --white: #ffffff;
+}
+
+/***Estrutura de html***/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-snap-type: Y mandatory;
+  font-family: "Noto Sans", sans-serif;
+  background: url(../img/portada.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/***selector para selecionar texto y muestra el color***/
+::selection {
+  background-color: #0a3871;
+  color: #ffffff;
+}
+
+.header-logo {
+  margin-left: 6rem;
+  margin-bottom: 2rem;
+  margin-top: 30px;
+}
+
+/***Section Principal y contenedor***/
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  max-width: 120rem;
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 30px;
+}
+
+/***bloque de caja de texto***/
+.encriptador {
+  padding: 10px;
+  width: 600px;
+  height: 400px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 1rem;
+  line-height: 5rem;
+  outline: none;
+  border: 1px solid #d8dfe8;
+  resize: none; /***Esta propieda bloquea modificar el cuadro de texto***/
+}
+
+.encriptador::placeholder,
+:focus {
+  color: var(--darkBlue);
+}
+
+/***botones***/
+.boton-encriptar {
+  align-items: center;
+  background-color: var(--darkBlue);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+.boton-descriptar {
+  align-items: center;
+  background-color: #d8dfe8;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: var(--darkBlue);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+.boton-copiar {
+  align-items: center;
+  background-color: var(--darkBlue);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+}
+/*  */
+/***cuadro de imagen***/
+
+.bloque-2 {
+  background-color: #e4e4e4;
+  width: 400px;
+  height: 600px;
+  border-radius: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 4px 16px 23px -2px #8a8a8a;
+  position: relative;
+}
+
+.bloque-2_contenedor {
+  width: 300px;
+  margin: auto;
+  margin-top: 40%;
+}
+
+.imagen {
+  width: 200px;
+  height: auto;
+}
+
+.texto-1 {
+  color: var(--darkBlue);
+  font-size: 20px;
+}
+.texto-2 {
+  color: #474b50;
+  font-size: 13px;
+}
+
+.text-value {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #0a3871;
+  background: transparent;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  border: none;
+  resize: none;
+}
+
+.text-value:focus {
+  outline: none;
+}
+
+.contenido-footer {
+  text-align: center;
+}
+
+.boton-encriptar:hover,
+.boton-descriptar:hover,
+.boton-copiar:hover {
+  transform: scale(0.96);
+}
+
+/***efecto de precion con sombra en boton***/
+
+.boton-copiar,
+.boton-descriptar:active {
+  box-shadow: inset 1px 1px 3px var(--darkBlue);
+}
+
+.imagen-aviso {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.copy-right {
+  font-size: 15px;
+}
+
+/***secciones resposive***/
+
+@media (max-width: 1250px) {
+  .contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bloque-1 {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bloque-1__botones {
+    display: flex;
+    align-items: center;
+    position: inherit;
+    gap: 10px;
+  }
+
+  .bloque-2 {
+    background-color: #e4e4e4;
+    width: 600px;
+    height: 400px;
+    border-radius: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 4px 16px 23px -2px #8a8a8a;
+    position: relative;
+  }
+
+  .bloque-2_contenedor {
+    width: 300px;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .imagen-aviso {
+    position: inherit;
+    margin: 15px;
+  }
+
+  .text-value {
+    width: 100%;
+    height: 330px;
+  }
+}
+
+@media (max-width: 720px) {
+  .encriptador {
+    width: 90%;
+  }
+  .bloque-1 {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bloque-1__botones {
+    display: flex;
+    align-items: center;
+    position: inherit;
+    gap: 10px;
+  }
+
+  .bloque-2 {
+    background-color: #e4e4e4;
+    width: 90%;
+    height: 400px;
+    border-radius: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 4px 16px 23px -2px #8a8a8a;
+    position: relative;
+  }
+
+  .bloque-2_contenedor {
+    width: 300px;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .imagen-aviso {
+    position: inherit;
+    margin: 15px;
+  }
+
+  .contenido-footer {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+}
