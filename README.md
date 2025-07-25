@@ -1,1 +1,2 @@
-Para iniciar el proyecto puedes visualizarlo directamente del enlace o descargar el repositorio y ejecutarlo localmente
+<h1>Encriptador de texto</h1>
+<p>Proyecto práctico relacionado a las bases principales de HTML, CSS y interacción con Javascript</p>
